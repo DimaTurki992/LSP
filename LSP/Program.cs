@@ -14,8 +14,16 @@ namespace LSP {
 
             emp.FirstName = "Tom";
             emp.LastName = "Lally";
-            emp.AssignManager(accountingVP);
+            // the following line cannot be be performed because an Employee cannot have a manager
+            //emp.AssignManager(accountingVP);
             emp.CalculatePerHourRate(2);
+
+            // or we can change the code into the following
+            Managed emp2 = new Manager();
+            emp2.FirstName = "Tom";
+            emp2.LastName = "Lally";
+            emp2.AssignManager(accountingVP);
+
 
             Console.WriteLine($"{ emp.FirstName }'s salary is ${ emp.Salary }/hour.");
 
