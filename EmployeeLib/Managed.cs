@@ -1,6 +1,6 @@
 ﻿namespace EmployeeLib
 {
-    public class Managed: Employee
+    public class Managed : Employee
     {
         public Employee Manager { get; set; } = null;
 
