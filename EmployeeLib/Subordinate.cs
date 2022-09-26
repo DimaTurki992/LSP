@@ -1,10 +1,10 @@
 ﻿namespace EmployeeLib
 {
-    public class Managed : Employee
+    public class Subordinate : Employee
     {
-        public Employee Manager { get; set; } = null;
+        public Manager Manager { get; set; } = null;
 
-        public virtual void AssignManager(Employee manager)
+        public virtual void AssignManager(Manager manager)
         {
             // Simulate doing other tasks here - otherwise, this should be
             // a property set statement, not a method.
