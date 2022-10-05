@@ -2,7 +2,7 @@
 
 namespace EmployeeLib
 {
-    public class CEO : Employee
+    public class CEO : Employee, IPerformanceReviewer
     {
         public override void CalculatePerHourRate(int rank)
         {
@@ -11,21 +11,16 @@ namespace EmployeeLib
             Salary = baseAmount * rank;
         }
 
-        public override void AssignManager(Employee manager)
+        public void FireSomeone()
         {
-            throw new InvalidOperationException("The CEO has no manager.");
+            // Simulate firing someone
+            Console.WriteLine("You're Fired!");
         }
 
         public void GeneratePerformanceReview()
         {
             // Simulate reviewing a direct report
             Console.WriteLine("I'm reviewing a direct report's performance.");
-        }
-
-        public void FireSomeone()
-        {
-            // Simulate firing someone
-            Console.WriteLine("You're Fired!");
         }
     }
 }
