@@ -1,6 +1,6 @@
 ﻿namespace EmployeeLib
 {
-    public class Employee
+    public abstract class Employee
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
